@@ -1,0 +1,556 @@
+@font-face {
+  font-family: blogger_sansbold; /* Гарнитура шрифта */
+  src: url(../fonts/8848.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'blogger_sans_medium', 'Arial', sans-serif;
+  .blue {
+    background: #60bdda;
+  }
+  .green {
+    background: #64b964;
+  }
+  .violet {
+    background: #8257a2;
+  }
+  .navy {
+    background: #004a8b;
+  }
+  .orange {
+    background: #ff7631;
+  }
+}
+
+header {
+  width: 100%;
+  background: white;
+  position: fixed;
+  box-shadow: 0 0 15px rgba(122, 122, 122, 0.5);
+  height: 100px;
+  z-index: 99;
+
+  .logo {
+    display: block;
+    position: absolute;
+    background-image: url("../images/logo.png");
+    background-size: cover;
+
+    width: 147px;
+    height: 128px;
+    margin: 10px 20px;
+    left: 0;
+    top: 0;
+    z-index: 100;
+
+    @media (max-width: 990px) {
+      width: 114px;
+      height: 100px;
+    }
+  }
+
+  .container {
+    height: 100%;
+    position: relative;
+    padding: 1px;
+    width: 100%;
+    max-width: 1187px;
+    margin: 0 auto;
+
+    nav {
+      margin-left: 185px;
+      margin-top: 30px;
+      margin-right: 185px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          display: inline-block;
+          font-size: 120%;
+          margin: 10px;
+
+          a {
+            color: black;
+            text-decoration: none;
+
+          }
+          :hover + .underline {
+            background: gray;
+          }
+
+        }
+      }
+    }
+    .phone {
+      font-size: 120%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 20px;
+      margin-top: 40px;
+      float: right;
+
+      a {
+        color: #ff7631;
+        text-decoration: none;
+
+        &:hover + .underline {
+          background: gray;
+        }
+      }
+    }
+    button {
+      margin-top: 40px;
+      position: absolute;
+      right: 185px;
+    }
+
+    ul.dropdown-menu {
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      top: 95px;
+      border: none;
+
+      li {
+        font-size: 120%;
+        z-index: 1;
+        position: relative;
+
+        a {
+          color: black;
+          text-decoration: none;
+          text-align: center;
+
+          &:hover, &:focus {
+            color: black;
+            background: white none;
+          }
+
+        }
+        :hover + .underline {
+          background: gray;
+        }
+      }
+    }
+
+    .underline {
+      height: 7px;
+      width: 30px;
+      margin: 10px auto 0;
+      border-radius: 3.5px;
+
+    }
+
+  }
+}
+
+main {
+  padding-top: 120px;
+  .map {
+
+    background: white url("../images/map-winter.png") no-repeat top center;
+    background-size: 75%;
+    height: 33vw;
+    max-height: 500px;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .point {
+      position: relative;
+      width: max-content;
+      margin: 0;
+      .pointphoto {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -100px;
+        left: -60%;
+        border-radius: 100px;
+        border: #004a8b solid 3px;
+        display: none;
+        box-shadow: 3px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+
+        &:hover {
+          display: block;
+        }
+      }
+
+      .label {
+        margin: 0;
+        display: block;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 4px 10px;
+        color: white;
+        font-stretch: expanded;
+        box-shadow: 3px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+        &:hover + .pointphoto {
+          display: block;
+        }
+      }
+
+    }
+    .point1 {
+      top: 10%;
+      left: 28%;
+      .pointphoto {
+        background: url("../images/point1.png") center center;
+        background-size: cover;
+      }
+    }
+
+    .point2 {
+      top: 28%;
+      left: 20%;
+      .pointphoto {
+        left: -5%;
+        background: url("../images/point2.png") center center;
+        background-size: cover;
+      }
+    }
+    .point3 {
+      top: 50%;
+      left: 25%;
+      z-index: 50;
+      .pointphoto {
+        left: -15%;
+        background: url("../images/point3.jpg") center center;
+        background-size: cover;
+      }
+    }
+    .point4 {
+      top: 15%;
+      left: 60%;
+      .pointphoto {
+        background: url("../images/point4.png") center center;
+        background-size: cover;
+      }
+    }
+
+    .point5 {
+      top: 38%;
+      left: 63%;
+      z-index: 50;
+      .pointphoto {
+        left: -5%;
+        background: url("../images/point5.jpg") center center;
+        background-size: cover;
+      }
+    }
+  }
+  .photo {
+    background: url("../images/block-about-winter.png") no-repeat center center;
+    height: 1175px;
+    position: relative;
+    top: -15vw;
+    padding-top: 250px;
+    @media (max-width: 991px) {
+      height: 1012px;
+      background-position-y: -162px;
+      top: -100px;
+      padding-top: 130px;
+    }
+    @media (min-width: 1666px) {
+      height: 1175px;
+      top: -250px;
+    }
+
+    h1, p {
+      display: block;
+      width: fit-content;
+      margin: 0 auto;
+      text-transform: uppercase;
+      color: white;
+      font-family: 'blogger_sansbold', 'Arial', sans-serif;
+
+    }
+    p {
+      font-size: 180%;
+      font-family: 'blogger_sans_medium', 'Arial', sans-serif;
+      font-weight: lighter;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .sticker {
+      border-radius: 30px;
+      background: #f7f7f7;
+      margin: 0 20px 50px;
+      font-size: 150%;
+      padding: 7px;
+      position: relative;
+      width: fit-content;
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        border: white solid 3px;
+        border-radius: 20px;
+        position: absolute;
+        margin: 2px;
+      }
+      div {
+        margin: 7px 7px 7px 60px;
+        width: fit-content;
+      }
+    }
+    .more {
+      display: block;
+      color: black;
+      position: absolute;
+      padding: 0 auto;
+      width: 100%;
+      top: 900px;
+      margin: 0 auto;
+
+      @media (min-width: 991px) {
+        top: 1050px;
+      }
+    }
+  }
+  .about {
+    margin-top: -200px;
+    .know {
+      font-size: 180%;
+      font-family: 'blogger_sans_medium', sans-serif;
+      display: block;
+      position: static;
+      margin: 0 auto;
+      width: fit-content;
+      border-radius: 20px;
+      box-shadow: 3px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+    }
+    @media (max-width: 991px) {
+      margin-top: -100px;
+    }
+    .dogs {
+      height: 300px;
+      background: url("../images/block-dogs.png") center repeat-x;
+    }
+    h2 {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 20px;
+      text-transform: uppercase;
+      font-family: 'blogger_sansbold', 'Arial', sans-serif;
+
+    }
+    p {
+      padding: 20px 50px;
+      font-size: 150%;
+    }
+    article {
+      display: flex;
+      font-size: 150%;
+      flex-wrap: wrap;
+      align-items: center;
+      .event {
+        width: 30%;
+        height: 30vw;
+        margin: 10px 5%;
+        border-radius: 50%;
+        @media (max-width: 991px) {
+          width: 90%;
+          height: 90vw;
+        }
+      }
+      .event1 {
+        background: url("../images/event1.png") no-repeat;
+        background-size: contain;
+      }
+      .event2 {
+        background: url("../images/event2.png") no-repeat;
+        background-size: cover;
+      }
+      .event3 {
+        background: url("../images/event3.png") no-repeat;
+        background-size: cover;
+      }
+      .event4 {
+        background: url("../images/event4.jpg") no-repeat;
+        background-size: cover;
+      }
+      .description {
+        margin: 10px 5%;
+        width: 50%;
+        @media (max-width: 991px) {
+          width: 90%;
+          height: 90vw;
+          font-size: 70%;
+        }
+      }
+      .details {
+        font-family: 'blogger_sansbold', 'Arial', sans-serif;
+        padding: 10px 5%;
+        font-size: 100%;
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+        height: fit-content;
+        border-radius: 20px;
+        color: white;
+      }
+    }
+
+  }
+  .grill{
+    background: url("../images/block-grill.png") center no-repeat;
+    background-position-y: 0;
+    padding-top: 200px;
+    h2{
+      width: fit-content;
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-family: 'blogger_sansbold', 'Arial', sans-serif;
+    }
+    p{
+      font-size: 180%;
+      font-family: 'blogger_sans_medium', 'Arial', sans-serif;
+      text-align: center;
+      margin-bottom: 60px;
+      text-transform: uppercase;
+    }
+    .grills{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      .text{
+        margin: 10px;
+        width: 80%;
+        font-size: 150%;
+      }
+      .icon{
+        width: 65px;
+        height: 65px;
+      margin: 10px;
+      }
+      .icon1{
+        background: url("../images/block-grill-icon-house.png") no-repeat;
+        background-size: contain;
+      }
+      .icon2{
+        background: url("../images/block-grill-icon-grill.png") no-repeat;
+        background-size: contain;
+      }
+      .icon3{
+        background: url("../images/block-grill-icon-hotdog.png") no-repeat;
+        background-size: contain;
+      }
+
+    }
+    .have{
+      padding: 50px 5% 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      p{
+        width: 100%;
+        margin: 10px;
+      }
+      .block{
+        width: 45%;
+        min-width: 400px;
+        margin: 0 20px;
+        position: relative;
+        padding-top: 50px;
+        p{
+          font-size: 100%;
+          font-family: 'blogger_sansbold', sans-serif;
+        }
+        .details{
+          font-family: 'blogger_sansbold', 'Arial', sans-serif;
+          padding: 5px;
+          font-size: 120%;
+          display: block;
+          margin: 10px;
+          width: 100%;
+          height: fit-content;
+          border-radius: 20px;
+          color: white;
+          text-align: center;
+
+        }
+        }
+      }
+    }
+
+  .questions {
+    background: url("../images/question-form-bg-winter.png") no-repeat top center;
+    //background-position-y: -50px;
+    height: 750px;
+    padding: 100px 10px;
+    #question-form {
+      margin: 0 auto;
+      margin-top: 180px;
+      max-width: 500px;
+      .form-title {
+        color: white;
+        text-transform: uppercase;
+        font-size: 180%;
+        p {
+          display: block;
+          margin: 5px auto;
+          width: fit-content;
+          text-align: center;
+        }
+      }
+      .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        .question-contact {
+          display: block;
+          padding: 5px 15px;
+          width: 48%;
+          height: 40px;
+          border-radius: 20px;
+        }
+
+      }
+
+      textarea.question {
+        display: block;
+        width: 100%;
+        height: 150px;
+        padding: 15px;
+        border-radius: 20px;
+        margin: 10px 0;
+      }
+      .policy {
+        display: block;
+        margin: 5px auto;
+        width: fit-content;
+        text-align: center;
+        color: white;
+        font-size: 120%;
+      }
+      button {
+        width: 100%;
+        height: 50px;
+        border-radius: 25px;
+        color: white;
+        background: #5fbfdb;
+        border: none;
+        box-shadow: 0 0 15px rgba(122, 122, 122, 0.5);
+        &:active, &:visited {
+          background: gray;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+

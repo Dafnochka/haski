@@ -1,0 +1,526 @@
+@font-face {
+  font-family: blogger_sansbold;
+  src: url(../fonts/8848.ttf);
+  
+  /* Гарнитура шрифта */
+  /* Путь к файлу со шрифтом */
+}
+body {
+  margin: 0;
+  font-family: 'blogger_sans_medium', 'Arial', sans-serif;
+}
+body .blue {
+  background: #60bdda;
+}
+body .green {
+  background: #64b964;
+}
+body .violet {
+  background: #8257a2;
+}
+body .navy {
+  background: #004a8b;
+}
+body .orange {
+  background: #ff7631;
+}
+header {
+  width: 100%;
+  background: white;
+  position: fixed;
+  box-shadow: 0 0 15px rgba(122, 122, 122, 0.5);
+  height: 100px;
+  z-index: 99;
+}
+header .logo {
+  display: block;
+  position: absolute;
+  background-image: url("../images/logo.png");
+  background-size: cover;
+  width: 147px;
+  height: 128px;
+  margin: 10px 20px;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (max-width: 990px) {
+  header .logo {
+    width: 114px;
+    height: 100px;
+  }
+}
+header .container {
+  height: 100%;
+  position: relative;
+  padding: 1px;
+  width: 100%;
+  max-width: 1187px;
+  margin: 0 auto;
+}
+header .container nav {
+  margin-left: 185px;
+  margin-top: 30px;
+  margin-right: 185px;
+}
+header .container nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  list-style-type: none;
+  padding: 0;
+}
+header .container nav ul li {
+  display: inline-block;
+  font-size: 120%;
+  margin: 10px;
+}
+header .container nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+header .container nav ul li :hover + .underline {
+  background: gray;
+}
+header .container .phone {
+  font-size: 120%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 20px;
+  margin-top: 40px;
+  float: right;
+}
+header .container .phone a {
+  color: #ff7631;
+  text-decoration: none;
+}
+header .container .phone a:hover + .underline {
+  background: gray;
+}
+header .container button {
+  margin-top: 40px;
+  position: absolute;
+  right: 185px;
+}
+header .container ul.dropdown-menu {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  top: 95px;
+  border: none;
+}
+header .container ul.dropdown-menu li {
+  font-size: 120%;
+  z-index: 1;
+  position: relative;
+}
+header .container ul.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+  text-align: center;
+}
+header .container ul.dropdown-menu li a:hover,
+header .container ul.dropdown-menu li a:focus {
+  color: black;
+  background: white none;
+}
+header .container ul.dropdown-menu li :hover + .underline {
+  background: gray;
+}
+header .container .underline {
+  height: 7px;
+  width: 30px;
+  margin: 10px auto 0;
+  border-radius: 3.5px;
+}
+main {
+  padding-top: 120px;
+}
+main .map {
+  background: #ffffff url("../images/map-winter.png") no-repeat top center;
+  background-size: 75%;
+  height: 33vw;
+  max-height: 500px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+main .map .point {
+  position: relative;
+  width: max-content;
+  margin: 0;
+}
+main .map .point .pointphoto {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -100px;
+  left: -60%;
+  border-radius: 100px;
+  border: #004a8b solid 3px;
+  display: none;
+  box-shadow: 3px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+}
+main .map .point .pointphoto:hover {
+  display: block;
+}
+main .map .point .label {
+  margin: 0;
+  display: block;
+  border-radius: 20px;
+  width: fit-content;
+  padding: 4px 10px;
+  color: white;
+  font-stretch: expanded;
+  box-shadow: 3px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+}
+main .map .point .label:hover + .pointphoto {
+  display: block;
+}
+main .map .point1 {
+  top: 10%;
+  left: 28%;
+}
+main .map .point1 .pointphoto {
+  background: url("../images/point1.png") center center;
+  background-size: cover;
+}
+main .map .point2 {
+  top: 28%;
+  left: 20%;
+}
+main .map .point2 .pointphoto {
+  left: -5%;
+  background: url("../images/point2.png") center center;
+  background-size: cover;
+}
+main .map .point3 {
+  top: 50%;
+  left: 25%;
+  z-index: 50;
+}
+main .map .point3 .pointphoto {
+  left: -15%;
+  background: url("../images/point3.jpg") center center;
+  background-size: cover;
+}
+main .map .point4 {
+  top: 15%;
+  left: 60%;
+}
+main .map .point4 .pointphoto {
+  background: url("../images/point4.png") center center;
+  background-size: cover;
+}
+main .map .point5 {
+  top: 38%;
+  left: 63%;
+  z-index: 50;
+}
+main .map .point5 .pointphoto {
+  left: -5%;
+  background: url("../images/point5.jpg") center center;
+  background-size: cover;
+}
+main .photo {
+  background: url("../images/block-about-winter.png") no-repeat center center;
+  height: 1175px;
+  position: relative;
+  top: -15vw;
+  padding-top: 250px;
+}
+@media (max-width: 991px) {
+  main .photo {
+    height: 1012px;
+    background-position-y: -162px;
+    top: -100px;
+    padding-top: 130px;
+  }
+}
+@media (min-width: 1666px) {
+  main .photo {
+    height: 1175px;
+    top: -250px;
+  }
+}
+main .photo h1,
+main .photo p {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: white;
+  font-family: 'blogger_sansbold', 'Arial', sans-serif;
+}
+main .photo p {
+  font-size: 180%;
+  font-family: 'blogger_sans_medium', 'Arial', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  margin-bottom: 60px;
+}
+main .photo .sticker {
+  border-radius: 30px;
+  background: #f7f7f7;
+  margin: 0 20px 50px;
+  font-size: 150%;
+  padding: 7px;
+  position: relative;
+  width: fit-content;
+}
+main .photo .sticker .circle {
+  width: 40px;
+  height: 40px;
+  border: white solid 3px;
+  border-radius: 20px;
+  position: absolute;
+  margin: 2px;
+}
+main .photo .sticker div {
+  margin: 7px 7px 7px 60px;
+  width: fit-content;
+}
+main .photo .more {
+  display: block;
+  color: black;
+  position: absolute;
+  padding: 0 auto;
+  width: 100%;
+  top: 900px;
+  margin: 0 auto;
+}
+@media (min-width: 991px) {
+  main .photo .more {
+    top: 1050px;
+  }
+}
+main .about {
+  margin-top: -200px;
+}
+main .about .know {
+  font-size: 180%;
+  font-family: 'blogger_sans_medium', sans-serif;
+  display: block;
+  position: static;
+  margin: 0 auto;
+  width: fit-content;
+  border-radius: 20px;
+  box-shadow: 3px 5px 17.28px 0.72px rgba(0, 0, 0, 0.34);
+}
+@media (max-width: 991px) {
+  main .about {
+    margin-top: -100px;
+  }
+}
+main .about .dogs {
+  height: 300px;
+  background: url("../images/block-dogs.png") center repeat-x;
+}
+main .about h2 {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 20px;
+  text-transform: uppercase;
+  font-family: 'blogger_sansbold', 'Arial', sans-serif;
+}
+main .about p {
+  padding: 20px 50px;
+  font-size: 150%;
+}
+main .about article {
+  display: flex;
+  font-size: 150%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+main .about article .event {
+  width: 30%;
+  height: 30vw;
+  margin: 10px 5%;
+  border-radius: 50%;
+}
+@media (max-width: 991px) {
+  main .about article .event {
+    width: 90%;
+    height: 90vw;
+  }
+}
+main .about article .event1 {
+  background: url("../images/event1.png") no-repeat;
+  background-size: contain;
+}
+main .about article .event2 {
+  background: url("../images/event2.png") no-repeat;
+  background-size: cover;
+}
+main .about article .event3 {
+  background: url("../images/event3.png") no-repeat;
+  background-size: cover;
+}
+main .about article .event4 {
+  background: url("../images/event4.jpg") no-repeat;
+  background-size: cover;
+}
+main .about article .description {
+  margin: 10px 5%;
+  width: 50%;
+}
+@media (max-width: 991px) {
+  main .about article .description {
+    width: 90%;
+    height: 90vw;
+    font-size: 70%;
+  }
+}
+main .about article .details {
+  font-family: 'blogger_sansbold', 'Arial', sans-serif;
+  padding: 10px 5%;
+  font-size: 100%;
+  display: block;
+  margin: 10px 0;
+  width: 100%;
+  height: fit-content;
+  border-radius: 20px;
+  color: white;
+}
+main .grill {
+  background: url("../images/block-grill.png") center no-repeat;
+  background-position-y: 0;
+  padding-top: 200px;
+}
+main .grill h2 {
+  width: fit-content;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-family: 'blogger_sansbold', 'Arial', sans-serif;
+}
+main .grill p {
+  font-size: 180%;
+  font-family: 'blogger_sans_medium', 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+main .grill .grills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .grill .grills .text {
+  margin: 10px;
+  width: 80%;
+  font-size: 150%;
+}
+main .grill .grills .icon {
+  width: 65px;
+  height: 65px;
+  margin: 10px;
+}
+main .grill .grills .icon1 {
+  background: url("../images/block-grill-icon-house.png") no-repeat;
+  background-size: contain;
+}
+main .grill .grills .icon2 {
+  background: url("../images/block-grill-icon-grill.png") no-repeat;
+  background-size: contain;
+}
+main .grill .grills .icon3 {
+  background: url("../images/block-grill-icon-hotdog.png") no-repeat;
+  background-size: contain;
+}
+main .grill .have {
+  padding: 50px 5% 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main .grill .have p {
+  width: 100%;
+  margin: 10px;
+}
+main .grill .have .block {
+  width: 45%;
+  min-width: 400px;
+  margin: 0 20px;
+  position: relative;
+  padding-top: 50px;
+}
+main .grill .have .block p {
+  font-size: 100%;
+  font-family: 'blogger_sansbold', sans-serif;
+}
+main .grill .have .block .details {
+  font-family: 'blogger_sansbold', 'Arial', sans-serif;
+  padding: 5px;
+  font-size: 120%;
+  display: block;
+  margin: 10px;
+  width: 100%;
+  height: fit-content;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+main .questions {
+  background: url("../images/question-form-bg-winter.png") no-repeat top center;
+  height: 750px;
+  padding: 100px 10px;
+}
+main .questions #question-form {
+  margin: 0 auto;
+  margin-top: 180px;
+  max-width: 500px;
+}
+main .questions #question-form .form-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 180%;
+}
+main .questions #question-form .form-title p {
+  display: block;
+  margin: 5px auto;
+  width: fit-content;
+  text-align: center;
+}
+main .questions #question-form .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .questions #question-form .wrap .question-contact {
+  display: block;
+  padding: 5px 15px;
+  width: 48%;
+  height: 40px;
+  border-radius: 20px;
+}
+main .questions #question-form textarea.question {
+  display: block;
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+main .questions #question-form .policy {
+  display: block;
+  margin: 5px auto;
+  width: fit-content;
+  text-align: center;
+  color: white;
+  font-size: 120%;
+}
+main .questions #question-form button {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  color: white;
+  background: #5fbfdb;
+  border: none;
+  box-shadow: 0 0 15px rgba(122, 122, 122, 0.5);
+}
+main .questions #question-form button:active,
+main .questions #question-form button:visited {
+  background: gray;
+}

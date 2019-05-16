@@ -1,0 +1,16 @@
+[0123/202636.799:ERROR:process_reader_win.cc(242)] ReadMemory at 0x755bfa60 of 28 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.800:WARNING:pe_image_reader.cc(137)] could not read data directory from C:\WINDOWS\System32\KERNEL32.DLL
+[0123/202636.801:ERROR:process_reader_win.cc(242)] ReadMemory at 0x6a098dbc of 33 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.802:WARNING:pe_image_reader.cc(157)] could not read debug directory from C:\WINDOWS\SYSTEM32\d3d9.dll
+[0123/202636.802:ERROR:process_reader_win.cc(242)] ReadMemory at 0x508dd9e4 of 34 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.803:WARNING:pe_image_reader.cc(157)] could not read debug directory from C:\WINDOWS\SYSTEM32\ESENT.dll
+[0123/202636.804:ERROR:process_reader_win.cc(242)] ReadMemory at 0x69d35200 of 28 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.804:WARNING:pe_image_reader.cc(137)] could not read data directory from C:\WINDOWS\system32\dataexchange.dll
+[0123/202636.804:ERROR:process_reader_win.cc(242)] ReadMemory at 0x50eb6fb0 of 28 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.804:WARNING:pe_image_reader.cc(137)] could not read data directory from C:\Windows\System32\FirewallAPI.dll
+[0123/202636.804:ERROR:process_reader_win.cc(242)] ReadMemory at 0x50e820d0 of 28 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.804:WARNING:pe_image_reader.cc(137)] could not read data directory from C:\Windows\System32\FWPolicyIOMgr.dll
+[0123/202636.927:ERROR:process_reader_win.cc(242)] ReadMemory at 0x71ae0040 of 92 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202636.927:WARNING:pe_image_reader.cc(247)] could not read version info from C:\WINDOWS\SYSTEM32\OLEACC.dll
+[0123/202637.026:ERROR:process_reader_win.cc(242)] ReadMemory at 0x746552ec of 512 bytes failed: «апрос ReadProcessMemory или WriteProcessMemory был выполнен только частично. (0x12B)
+[0123/202637.026:ERROR:crash_report_exception_handler.cc(116)] WriteEverything failed
